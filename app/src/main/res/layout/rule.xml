@@ -505,7 +505,23 @@
                 android:layout_height="wrap_content"
                 android:text="@string/title_stop_mobile"
                 android:textAppearance="@style/TextSmall" />
+
+
+
+
         </LinearLayout>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="314dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/simpleProgressBar"
+            android:layout_gravity="right" />
+        <!-- android:max="@integer/totalspeed"
+         android:progress="100"-->
+
+         <!--android:max="@string/title_mobile"
+         android:progress="@string/title_setting"-->
 
 
 
@@ -513,12 +529,6 @@
 
     </LinearLayout>
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="314dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:layout_gravity="right" />
 
 
 </LinearLayout>

@@ -56,6 +56,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupMenu;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
@@ -127,6 +128,9 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
         public TextView tvStatisticsuidUD;
 
 
+        public ProgressBar simpleProgressBar;
+
+
         public ViewHolder(View itemView) {
             super(itemView);
             view = itemView;
@@ -176,7 +180,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
             //tvStatisticswifiUD = (TextView) itemView.findViewById(R.id.tvStatisticswifiUD);
             tvStatisticsuid = (TextView) itemView.findViewById(R.id.tvStatisticsuid);
             tvStatisticsuidUD = (TextView) itemView.findViewById(R.id.tvStatisticsuidUD);
-
+            simpleProgressBar = (ProgressBar)itemView.findViewById(R.id.simpleProgressBar);
 
 
 
@@ -676,6 +680,8 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
 
         holder.tvStatisticsuid.setText(context.getString(R.string.msg_mbdayuid,rule.totalspeed));
         holder.tvStatisticsuidUD.setText(context.getString(R.string.msg_mbdayuidUD, rule.upspeed, rule.downspeed ));
+
+        holder.simpleProgressBar.setProgress((int)rule.totalspeed);
 
 
     }
