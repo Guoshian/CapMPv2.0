@@ -681,6 +681,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
         holder.tvStatisticsuid.setText(context.getString(R.string.msg_mbdayuid,rule.totalspeed));
         holder.tvStatisticsuidUD.setText(context.getString(R.string.msg_mbdayuidUD, rule.upspeed, rule.downspeed ));
 
+        holder.simpleProgressBar.setMax((int) rule.totalspeedmobile);
         holder.simpleProgressBar.setProgress((int)rule.totalspeed);
 
 
