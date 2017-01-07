@@ -137,7 +137,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
 
             llApplication = (LinearLayout) itemView.findViewById(R.id.llApplication);
             ivIcon = (ImageView) itemView.findViewById(R.id.ivIcon);
-            ivExpander2 = (ImageView) itemView.findViewById(R.id.ivExpander2);
+            //ivExpander2 = (ImageView) itemView.findViewById(R.id.ivExpander2);
             tvName = (TextView) itemView.findViewById(R.id.tvName);
 
             tvHosts = (TextView) itemView.findViewById(R.id.tvHosts);
@@ -329,7 +329,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
         holder.itemView.setBackgroundColor(rule.changed ? colorChanged : Color.TRANSPARENT);
 
         // Show expand/collapse indicator
-        holder.ivExpander2.setImageLevel(rule.expanded ? 1 : 0);
+        //holder.ivExpander2.setImageLevel(rule.expanded ? 1 : 0);
 
         // Show application icon
         if (rule.info.applicationInfo == null || rule.info.applicationInfo.icon == 0)
