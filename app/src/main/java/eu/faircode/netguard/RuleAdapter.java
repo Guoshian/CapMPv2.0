@@ -127,7 +127,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
         public TextView tvStatisticsuid;
         public TextView tvStatisticsuidUD;
 
-
+        public TextView textView4;
         public ProgressBar simpleProgressBar;
         public TextView textView;
 
@@ -181,6 +181,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
             tvStatisticsuid = (TextView) itemView.findViewById(R.id.tvStatisticsuid);
             tvStatisticsuidUD = (TextView) itemView.findViewById(R.id.tvStatisticsuidUD);
 
+            textView4 = (TextView)itemView.findViewById(R.id.textView4);
             simpleProgressBar = (ProgressBar)itemView.findViewById(R.id.simpleProgressBar);
 
             textView = (TextView)itemView.findViewById(R.id.textView);
@@ -681,6 +682,8 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
 
         holder.tvStatisticsuid.setText(context.getString(R.string.msg_mbdayuid,rule.totalspeed));
         holder.tvStatisticsuidUD.setText(context.getString(R.string.msg_mbdayuidUD, rule.upspeed, rule.downspeed ));
+
+        holder.textView4.setText(context.getString(R.string.msg_mbdayuid,rule.totalspeed));
 
         holder.simpleProgressBar.setMax((int) rule.totalspeedmobile);
         holder.simpleProgressBar.setProgress((int) rule.totalspeed);

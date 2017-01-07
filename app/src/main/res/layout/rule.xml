@@ -73,9 +73,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Small Text"
-                android:id="@+id/textView4" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/textView4"
+                android:textColor="#111010" />
 
             <TextView
                 android:id="@+id/tvHosts"
@@ -559,7 +560,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Small Text"
+            android:text="percent"
             android:id="@+id/textView" />
 
         <TextView
