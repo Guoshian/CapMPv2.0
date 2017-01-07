@@ -88,7 +88,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
 
         public LinearLayout llApplication;
         public ImageView ivIcon;
-        public ImageView ivExpander2;
+        //public ImageView ivExpander2 ^;
         public TextView tvName;
 
         public TextView tvHosts;
@@ -129,7 +129,7 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
 
 
         public ProgressBar simpleProgressBar;
-
+        public TextView textView;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -180,9 +180,10 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
             //tvStatisticswifiUD = (TextView) itemView.findViewById(R.id.tvStatisticswifiUD);
             tvStatisticsuid = (TextView) itemView.findViewById(R.id.tvStatisticsuid);
             tvStatisticsuidUD = (TextView) itemView.findViewById(R.id.tvStatisticsuidUD);
+
             simpleProgressBar = (ProgressBar)itemView.findViewById(R.id.simpleProgressBar);
 
-
+            textView = (TextView)itemView.findViewById(R.id.textView);
 
 
 
@@ -682,8 +683,10 @@ public class RuleAdapter extends RecyclerView.Adapter<RuleAdapter.ViewHolder> im
         holder.tvStatisticsuidUD.setText(context.getString(R.string.msg_mbdayuidUD, rule.upspeed, rule.downspeed ));
 
         holder.simpleProgressBar.setMax((int) rule.totalspeedmobile);
-        holder.simpleProgressBar.setProgress((int)rule.totalspeed);
+        holder.simpleProgressBar.setProgress((int) rule.totalspeed);
 
+
+        holder.textView.setText(context.getString(R.string.msg_percent, rule.totalspeed/(rule.totalspeedmobile+rule.totalspeedwifi)*100));
 
     }
 

@@ -132,7 +132,8 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="msg_mbdaymobileUD"> %1$.2f MB</string>
   <string name="msg_mbdaywifiUD"> %1$.2f MB</string>
   <string name="msg_mbdayuid"> %1$.2f MB</string>
-  <string name="msg_mbdayuidUD">± Up: %1$.2fMB/ Down: %2$.2f MB</string>
+  <string name="msg_mbdayuidUD">± Up: %1$.2f MB/ Down: %2$.2f MB</string>
+  <string name="msg_percent">%1$.0f %%</string>
   <string name="msg_kbsec">%7.3f KB/s</string>
   <string name="msg_mbsec">%7.3f MB/s</string>
   <string name="msg_filter">Using filtering will cause Android to attribute data and power usage to NetGuard - Android assumes the data and power are being used by NetGuard, rather than the original applications</string>
