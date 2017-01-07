@@ -197,10 +197,6 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         tv_wifiTraffic = (TextView) findViewById(R.id.wifi_traffic);
 
 
-        numberPicker = (NumberPicker) findViewById(R.id.numberPicker);
-        numberPicker.setMaxValue(20000);
-        numberPicker.setMinValue(0);
-        numberPicker.setValue(100);
 
         //int[] to_layout = new int[]{R.id.textView,R.id.mobile_traffic};
 

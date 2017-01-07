@@ -158,6 +158,8 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <!--<string name="title_access">Access attempts</string>-->
   <string name="title_mobile">Mobile</string>
   <string name="title_wifi">Wifi</string>
+  <string name="title_network">Speed</string>
+
   <string name="title_total">Usaged</string>
   <!--<string name="title_no_log"><u>Logging is not enabled</u></string>-->
   <!--<string name="title_precedence">Access rules take precedence over other rules</string>-->
