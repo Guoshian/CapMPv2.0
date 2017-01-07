@@ -54,6 +54,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.NumberPicker;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -91,6 +92,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     public static final String EXTRA_APPROVE = "Approve";
     private TextView tv_mobileTraffic;
     private TextView tv_wifiTraffic;
+
+    public NumberPicker numberPicker;
 
     //private static final int REQUEST_PCAP = 1;
 
@@ -193,6 +196,11 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         tv_mobileTraffic = (TextView) findViewById(R.id.mobile_traffic);
         tv_wifiTraffic = (TextView) findViewById(R.id.wifi_traffic);
 
+
+        numberPicker = (NumberPicker) findViewById(R.id.numberPicker);
+        numberPicker.setMaxValue(20000);
+        numberPicker.setMinValue(0);
+        numberPicker.setValue(100);
 
         //int[] to_layout = new int[]{R.id.textView,R.id.mobile_traffic};
 
