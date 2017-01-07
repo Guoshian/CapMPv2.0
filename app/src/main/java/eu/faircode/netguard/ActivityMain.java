@@ -54,6 +54,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
@@ -93,7 +94,12 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     private TextView tv_mobileTraffic;
     private TextView tv_wifiTraffic;
 
-    public NumberPicker numberPicker;
+    private Button button;
+    private EditText editText2;
+    private TextView textView8;
+
+
+    //public NumberPicker numberPicker;
 
     //private static final int REQUEST_PCAP = 1;
 
@@ -101,6 +107,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i(TAG, "Create");
+
+
 
         if (Build.VERSION.SDK_INT < MIN_SDK) {
             super.onCreate(savedInstanceState);
@@ -195,6 +203,25 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         // Total Traffic
         tv_mobileTraffic = (TextView) findViewById(R.id.mobile_traffic);
         tv_wifiTraffic = (TextView) findViewById(R.id.wifi_traffic);
+
+
+
+
+        textView8 = (TextView)findViewById(R.id.textView8);
+
+        editText2 = (EditText)findViewById(R.id.editText2);
+
+        button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new Button.OnClickListener()
+            {
+                public void onClick(View v){
+                    textView8.setText(editText2.getText());
+
+                }
+            });
+
+
+
 
 
 
