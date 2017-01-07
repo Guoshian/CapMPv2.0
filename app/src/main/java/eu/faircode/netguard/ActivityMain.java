@@ -95,10 +95,12 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     private TextView tv_mobileTraffic;
     private TextView tv_wifiTraffic;
 
+    private float tv_mobileTrafficfloat;
+
     private Button button;
     private EditText editText2;
     private TextView textView8;
-    public ProgressBar simpleProgressBar;
+    private ProgressBar progressBar;
 
     //public NumberPicker numberPicker;
 
@@ -201,31 +203,38 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             }
         });
 
+
         // Total Traffic
         tv_mobileTraffic = (TextView) findViewById(R.id.mobile_traffic);
         tv_wifiTraffic = (TextView) findViewById(R.id.wifi_traffic);
 
-        simpleProgressBar = (ProgressBar)findViewById(R.id.simpleProgressBar);
-
-        //simpleProgressBar.setMax(100);
-       // simpleProgressBar.setProgress(50);
 
 
+        //int mobileTraffic1 = Integer.valueOf(tv_mobileTraffic.getText().toString());
 
 
-
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        progressBar.setProgress((int) ((TrafficStats.getMobileRxBytes()+TrafficStats.getMobileTxBytes()) / 1024f / 1024f));
+        
         textView8 = (TextView)findViewById(R.id.textView8);
 
         editText2 = (EditText)findViewById(R.id.editText2);
-
         button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(new Button.OnClickListener()
-            {
-                public void onClick(View v){
-                    textView8.setText(editText2.getText());
 
-                }
-            });
+        button.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                textView8.setText(editText2.getText());
+
+                //progressBar.setProgress(50);
+                int Traffic = Integer.valueOf(textView8.getText().toString());
+                progressBar.setMax(Traffic);
+
+
+            }
+
+
+        });
+
 
 
 
@@ -364,6 +373,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     @Override
     protected void onResume() {
         float mobileTraffic = (float) (TrafficStats.getMobileRxBytes()+TrafficStats.getMobileTxBytes()) / 1024f / 1024f;
+        tv_mobileTrafficfloat = mobileTraffic;
         tv_mobileTraffic.setText(getString(R.string.msg_mbdaymobileUD, mobileTraffic));
 
         float wifiRXTraffic = (float) (TrafficStats.getTotalRxBytes()-TrafficStats.getMobileRxBytes());

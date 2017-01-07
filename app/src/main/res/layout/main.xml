@@ -102,7 +102,7 @@
 
         <ProgressBar
             style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="329dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:id="@+id/progressBar"
             android:focusable="true"
@@ -152,7 +152,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Medium Text"
+                android:text="100"
                 android:id="@+id/textView8" />
 
             <TextView
