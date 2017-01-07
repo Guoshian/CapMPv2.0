@@ -98,6 +98,55 @@
             android:id="@+id/wifi_traffic"
             android:textSize="@dimen/abc_action_bar_content_inset_material" />-->
 
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText2"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="MB"
+                android:id="@+id/textView7" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="69dp"
+                android:layout_height="40dp"
+                android:text="Enter"
+                android:id="@+id/button" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/textView8"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/textView6" />
+        </LinearLayout>
+
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
             android:layout_width="match_parent"
