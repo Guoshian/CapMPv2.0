@@ -95,12 +95,12 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     private TextView tv_mobileTraffic;
     private TextView tv_wifiTraffic;
 
-    private float tv_mobileTrafficfloat;
-
     private Button button;
     private EditText editText2;
     private TextView textView8;
+
     private ProgressBar progressBar;
+    public TextView textView11;
 
     //public NumberPicker numberPicker;
 
@@ -214,8 +214,8 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
 
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
-        progressBar.setProgress((int) ((TrafficStats.getMobileRxBytes()+TrafficStats.getMobileTxBytes()) / 1024f / 1024f));
-        
+        textView11 = (TextView)findViewById(R.id.textView11);
+
         textView8 = (TextView)findViewById(R.id.textView8);
 
         editText2 = (EditText)findViewById(R.id.editText2);
@@ -225,9 +225,14 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
             public void onClick(View v) {
                 textView8.setText(editText2.getText());
 
-                //progressBar.setProgress(50);
+
                 int Traffic = Integer.valueOf(textView8.getText().toString());
                 progressBar.setMax(Traffic);
+                progressBar.setProgress((int) ((TrafficStats.getMobileRxBytes() + TrafficStats.getMobileTxBytes()) / 1024f / 1024f));
+
+
+
+                textView11.setText(getString(R.string.msg_mbdaymobilePercent, ((TrafficStats.getMobileRxBytes() + TrafficStats.getMobileTxBytes()) / 1024f / 1024f) / (Traffic) * 100));
 
 
             }
@@ -373,7 +378,6 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     @Override
     protected void onResume() {
         float mobileTraffic = (float) (TrafficStats.getMobileRxBytes()+TrafficStats.getMobileTxBytes()) / 1024f / 1024f;
-        tv_mobileTrafficfloat = mobileTraffic;
         tv_mobileTraffic.setText(getString(R.string.msg_mbdaymobileUD, mobileTraffic));
 
         float wifiRXTraffic = (float) (TrafficStats.getTotalRxBytes()-TrafficStats.getMobileRxBytes());

@@ -131,6 +131,8 @@ Your internet traffic is not being sent to a remote VPN server.</string>
   <string name="msg_dimming">如果你在下一個對話框沒辦法點OK,可能是有其他App(濾波器之類的)在執行螢幕繪製.</string>
   <string name="msg_mbdaymobileUD"> %1$.2f MB</string>
   <string name="msg_mbdaywifiUD"> %1$.2f MB</string>
+  <string name="msg_mbdaymobilePercent"> %1$.0f %%</string>
+
   <string name="msg_mbdayuid"> %1$.2f MB</string>
   <string name="msg_mbdayuidUD">± Up: %1$.2f MB/ Down: %2$.2f MB</string>
   <string name="msg_percent">%1$.0f %%</string>

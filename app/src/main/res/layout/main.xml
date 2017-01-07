@@ -100,14 +100,42 @@
             android:id="@+id/wifi_traffic"
             android:textSize="@dimen/abc_action_bar_content_inset_material" />-->
 
-        <ProgressBar
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="300dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_gravity="center_horizontal" />
+            android:weightSum="1">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.08" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="244dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:indeterminate="false"
+                android:contextClickable="false"
+                android:layout_weight="0.47" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.19" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView11"
+                android:text="0%"
+                android:textColor="#111010" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -152,7 +180,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="100"
+                android:text="0"
                 android:id="@+id/textView8" />
 
             <TextView
