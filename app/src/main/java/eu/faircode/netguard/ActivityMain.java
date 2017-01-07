@@ -56,6 +56,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.NumberPicker;
+import android.widget.ProgressBar;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,7 +98,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
     private Button button;
     private EditText editText2;
     private TextView textView8;
-
+    public ProgressBar simpleProgressBar;
 
     //public NumberPicker numberPicker;
 
@@ -203,6 +204,12 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
         // Total Traffic
         tv_mobileTraffic = (TextView) findViewById(R.id.mobile_traffic);
         tv_wifiTraffic = (TextView) findViewById(R.id.wifi_traffic);
+
+        simpleProgressBar = (ProgressBar)findViewById(R.id.simpleProgressBar);
+
+        //simpleProgressBar.setMax(100);
+       // simpleProgressBar.setProgress(50);
+
 
 
 
