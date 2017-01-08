@@ -101,6 +101,7 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
     private ProgressBar progressBar;
     public TextView textView11;
+    public TextView textView10;
 
     //public NumberPicker numberPicker;
 
@@ -215,25 +216,26 @@ public class ActivityMain extends AppCompatActivity implements SharedPreferences
 
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
         textView11 = (TextView)findViewById(R.id.textView11);
+        textView10 = (TextView)findViewById(R.id.textView10);
 
-        textView8 = (TextView)findViewById(R.id.textView8);
+       // textView8 = (TextView)findViewById(R.id.textView8);
 
         editText2 = (EditText)findViewById(R.id.editText2);
         button = (Button)findViewById(R.id.button);
 
         button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                textView8.setText(editText2.getText());
+                //textView8.setText(editText2.getText());
 
 
-                int Traffic = Integer.valueOf(textView8.getText().toString());
+                int Traffic = Integer.valueOf(editText2.getText().toString());
                 progressBar.setMax(Traffic);
                 progressBar.setProgress((int) ((TrafficStats.getMobileRxBytes() + TrafficStats.getMobileTxBytes()) / 1024f / 1024f));
 
 
 
                 textView11.setText(getString(R.string.msg_mbdaymobilePercent, ((TrafficStats.getMobileRxBytes() + TrafficStats.getMobileTxBytes()) / 1024f / 1024f) / (Traffic) * 100));
-
+                textView10.setText(getString(R.string.msg_mbdaymobileUsage, (Traffic-((TrafficStats.getMobileRxBytes() + TrafficStats.getMobileTxBytes()) / 1024f / 1024f))));
 
             }
 
